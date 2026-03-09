@@ -2,16 +2,20 @@
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 /* base styles  */
+body {
+  background-color: black;
+}
+
 body,
 a {
-  background-color: black;
   color: white !important;
 }
 
 h1,
 h2,
 h3,
-.hero-quote {
+.hero-quote,
+.hero-subtitle {
   font-family: "Abel", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -34,16 +38,12 @@ a:hover {
 
 /* navbar */
 
-#nav {
-  margin-bottom: 10rem;
-}
-
 .hamburger {
   width: 35px;
   height: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   cursor: pointer;
 }
 
@@ -58,6 +58,21 @@ a:hover {
 
 /* hero section  */
 
+#home {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  align-items: center;
+  height: 90vh;
+}
+
+.hero-img {
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+  justify-content: end;
+}
+
 .hero-textsection {
   letter-spacing: 20%;
   text-align: right;
@@ -69,7 +84,13 @@ a:hover {
 
 .hero-quote {
   font-style: italic;
+  letter-spacing: 5%;
 }
+
+.hero-subtitle {
+  font-size: 12px;
+}
+
 /* Animate on toggle */
 
 .hamburger.active span:nth-child(1) {
