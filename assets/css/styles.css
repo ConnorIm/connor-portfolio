@@ -32,10 +32,6 @@ a:hover {
   color: #dbaa00 !important;
 }
 
-.activelink {
-  color: #dbaa00 !important;
-}
-
 /* navbar */
 
 .hamburger {
@@ -91,6 +87,25 @@ a:hover {
   font-size: 12px;
 }
 
+@media screen and (max-width: 867px) {
+  #home {
+    flex-direction: column;
+    margin-top: 10vh;
+    gap: 2rem;
+  }
+  #home h3,
+  #home h1 {
+    text-align: center;
+  }
+  .hero-img {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .simple-audio-player {
+    margin-inline: 20px !important;
+  }
+}
+
 /* Animate on toggle */
 
 .hamburger.active span:nth-child(1) {
@@ -119,6 +134,121 @@ a:hover {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* about  */
+
+#about {
+  height: 90vh;
+}
+
+#about h1,
+#about h4 {
+  text-align: center;
+  letter-spacing: 15%;
+  font-family: "Abel";
+}
+
+#about .about-text {
+  padding-inline: 20%;
+}
+
+.marquee {
+  padding: 28px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1400px;
+}
+
+/* Logo container */
+.logo-card {
+  width: 320px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* gold line base (hidden by default) */
+.logo-card::before,
+.logo-card::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(219, 170, 0, 0.9),
+    transparent
+  );
+
+  transform: translateX(-50%);
+  transition: width 0.35s ease;
+}
+
+.logo-card::before {
+  top: 0;
+}
+
+.logo-card::after {
+  bottom: 0;
+}
+
+/* Hover animation */
+.logo-card:hover::before,
+.logo-card:hover::after {
+  width: 85%;
+}
+
+/* Logo */
+.logo-card img {
+  max-height: 90px;
+  width: auto;
+  object-fit: contain;
+
+  opacity: 0.85;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* Hover effects */
+.logo-card:hover img {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.logo-card:hover {
+  transform: translateY(-6px);
+}
+
+.resume-btn {
+  text-align: center;
+}
+
+.resume-btn button {
+  background-color: transparent !important;
+  border: 1px solid #dbaa00;
+  border-radius: 100px;
+  letter-spacing: 10%;
+  font-family: "Abel";
+  font-size: 14px;
+}
+
+.resume-btn button:hover {
+  border: 1px solid white;
+}
 /* audio player  */
 
 *,
