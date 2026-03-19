@@ -14,8 +14,7 @@ a {
 h1,
 h2,
 h3,
-.hero-quote,
-.hero-subtitle {
+.hero-quote {
   font-family: "Abel", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -65,7 +64,7 @@ a:hover {
 .hero-img {
   display: flex;
   align-items: center;
-  margin-top: 4rem;
+  margin-top: 2rem;
   justify-content: end;
 }
 
@@ -81,10 +80,6 @@ a:hover {
 .hero-quote {
   font-style: italic;
   letter-spacing: 5%;
-}
-
-.hero-subtitle {
-  font-size: 12px;
 }
 
 @media screen and (max-width: 867px) {
@@ -217,7 +212,7 @@ a:hover {
 
 /* Logo */
 .logo-card img {
-  max-height: 90px;
+  max-height: 100px;
   width: auto;
   object-fit: contain;
 
@@ -241,7 +236,7 @@ a:hover {
   text-align: center;
 }
 
-.resume-btn button {
+.resume-btn .btn {
   background-color: transparent !important;
   border: 1px solid #dbaa00;
   border-radius: 100px;
@@ -250,7 +245,7 @@ a:hover {
   font-size: 14px;
 }
 
-.resume-btn button:hover {
+.resume-btn .btn:hover {
   border: 1px solid white;
 }
 /* audio player  */
