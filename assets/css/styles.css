@@ -272,7 +272,7 @@ a:hover {
 .resume-btn .btn,
 .resume-download a {
   background-color: transparent !important;
-  border: 1px solid #dbaa00;
+  border: 1px solid #dbaa00 !important;
   border-radius: 100px;
   letter-spacing: 10%;
   font-size: 14px;
@@ -311,7 +311,7 @@ a:hover {
 .send-btn:hover {
   background-color: transparent;
   color: #dbaa00;
-  border: 1px #dbaa00 solid;
+  border: 1px #dbaa00 solid !important;
 }
 
 .hide {
@@ -319,24 +319,24 @@ a:hover {
 }
 
 .social-media {
-  text-align: center;
-  padding-left: 0;
+  text-align: center !important;
+  padding-left: 0 !important;
 }
 
 .social-media > li {
-  display: inline;
+  display: inline !important;
 }
 
 .social-media a {
-  font-size: 200%;
-  margin: 1% 7%;
+  font-size: 200% !important;
+  margin: 1% 7% !important;
   color: #dbaa00 !important;
-  text-decoration: none;
-  padding: 10px 15px;
+  text-decoration: none !important;
+  padding: 10px 15px !important;
 }
 
 .social-media a i {
-  transition: color 0.2s ease;
+  transition: color 0.2s ease !important;
   color: #dbaa00 !important;
 }
 
