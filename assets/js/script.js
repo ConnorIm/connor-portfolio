@@ -35,9 +35,9 @@ let contactForm = document.getElementById("contact-form");
 
 function sendMail(contactForm) {
   emailjs
-    .send("", "", {
+    .send("service_", "template_", {
       from_name: contactForm.name.value,
-      to_name: "",
+      to_name: "Connor",
       user_email: contactForm.emailaddress.value,
       message: contactForm.content.value,
     })
