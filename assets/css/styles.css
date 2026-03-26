@@ -34,6 +34,10 @@ a:hover {
 
 /* navbar */
 
+.navbar-nav {
+  align-items: flex-end;
+}
+
 .hamburger {
   width: 35px;
   height: 25px;
@@ -53,7 +57,7 @@ a:hover {
 }
 
 .fixed-top {
-  padding: 20px;
+  padding: 30px;
 }
 
 .nav-link {
@@ -255,17 +259,29 @@ a:hover {
   transform: translateY(-6px);
 }
 
-.resume-btn {
+.resume-btn,
+.resume-download a {
   text-align: center;
+  font-family: "Outfit";
 }
 
 .resume-btn .btn {
+  font-family: "Abel";
+}
+
+.resume-btn .btn,
+.resume-download a {
   background-color: transparent !important;
   border: 1px solid #dbaa00;
   border-radius: 100px;
   letter-spacing: 10%;
-  font-family: "Abel";
   font-size: 14px;
+}
+
+@media screen and (max-width: 991px) {
+  .resume-download a {
+    margin-top: 8px;
+  }
 }
 
 @media screen and (max-width: 867px) {
@@ -300,6 +316,38 @@ a:hover {
 
 .hide {
   display: none;
+}
+
+.social-media {
+  text-align: center;
+  padding-left: 0;
+}
+
+.social-media > li {
+  display: inline;
+}
+
+.social-media a {
+  font-size: 200%;
+  margin: 1% 7%;
+  color: #dbaa00 !important;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.social-media a i {
+  transition: color 0.2s ease;
+  color: #dbaa00 !important;
+}
+
+.social-media a:hover i {
+  color: white !important;
+}
+
+.social-media a:link,
+.social-media a:visited,
+.social-media a:active {
+  color: #dbaa00 !important;
 }
 
 @media screen and (max-width: 867px) {
