@@ -67,7 +67,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact Me</a>
+                <a class="nav-link" href="#contact">Contact Me</a>
               </li>
             </ul>
           </div>
@@ -220,6 +220,74 @@
       </div>
     </section>
 
+    <section id="contact" class="pt-4">
+      <h1 class="text-center mb-4 pt-2">
+        <span style="color: #dbaa00">-</span> CONTACT ME
+        <span style="color: #dbaa00">-</span>
+      </h1>
+      <div id="email-success" class="hide">
+        <h2 class="text-center pt-2">Thank you!</h2>
+      </div>
+      <div id="email-fail" class="hide">
+        <h2 class="text-center mb-3 pt-2">Sorry, please try again</h2>
+      </div>
+      <form id="contact-form" onsubmit="return sendMail(this);">
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="form-control mb-2"
+          placeholder="Name"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          id="emailaddress"
+          class="form-control mb-2"
+          placeholder="Email"
+          required
+        />
+        <textarea
+          rows="5"
+          name="content"
+          id="content"
+          class="form-control mb-4"
+          placeholder="Your message here"
+          required
+        ></textarea>
+        <div class="form-row text-center">
+          <div class="col">
+            <button type="submit" class="send-btn btn py-2">SEND</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- social media links  -->
+    <!-- <section class="social-media-container pt-5">
+      <ul class="social-media">
+        <li>
+          <a
+            href="https://github.com/lee-joanne"
+            target="_blank"
+            rel="noopener"
+            aria-label="Visit lee-joanne Github page (opens in new link)"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/lee-joanne54/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Visit my LinkedIn page (opens in a new tab)"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </li>
+      </ul>
+    </section> -->
+
     <!-- Scripts  -->
     <script src="assets/js/script.js"></script>
     <script
@@ -227,5 +295,12 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <!-- Email JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("KAn4umj_6oI-e-QC0");
+      })();
+    </script>
   </body>
 </html>

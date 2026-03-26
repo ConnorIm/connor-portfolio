@@ -14,7 +14,8 @@ a {
 h1,
 h2,
 h3,
-.hero-quote {
+.hero-quote,
+form {
   font-family: "Abel", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -51,6 +52,20 @@ a:hover {
   border-radius: 100px;
 }
 
+.fixed-top {
+  padding: 20px;
+}
+
+.nav-link {
+  padding: 16px 0;
+}
+
+#about,
+#home {
+  scroll-margin-top: 120px;
+  min-height: 100vh;
+}
+
 /* hero section  */
 
 #home {
@@ -58,7 +73,6 @@ a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
 }
 
 .typing {
@@ -147,12 +161,9 @@ a:hover {
 
 /* about  */
 
-#about {
-  height: 100vh;
-}
-
 #about h1,
-#about h4 {
+#about h4,
+#contact h1 {
   text-align: center;
   letter-spacing: 15%;
   font-family: "Abel";
@@ -162,7 +173,8 @@ a:hover {
   font-size: 20px;
 }
 
-#about .about-text {
+#about .about-text,
+#contact {
   padding-inline: 20%;
 }
 
@@ -180,7 +192,6 @@ a:hover {
   max-width: 1400px;
 }
 
-/* Logo container */
 .logo-card {
   width: 320px;
   height: 180px;
@@ -192,7 +203,6 @@ a:hover {
   transition: transform 0.3s ease;
 }
 
-/* gold line base (hidden by default) */
 .logo-card::before,
 .logo-card::after {
   content: "";
@@ -220,13 +230,11 @@ a:hover {
   bottom: 0;
 }
 
-/* Hover animation */
 .logo-card:hover::before,
 .logo-card:hover::after {
   width: 85%;
 }
 
-/* Logo */
 .logo-card img {
   max-height: 100px;
   width: auto;
@@ -238,7 +246,6 @@ a:hover {
     opacity 0.3s ease;
 }
 
-/* Hover effects */
 .logo-card:hover img {
   transform: scale(1.08);
   opacity: 1;
@@ -261,9 +268,46 @@ a:hover {
   font-size: 14px;
 }
 
-.resume-btn .btn:hover {
-  border: 1px solid white;
+@media screen and (max-width: 867px) {
+  #about .about-text,
+  #contact {
+    padding-inline: 10%;
+  }
 }
+
+/* contact  */
+
+#contact {
+  min-height: 84vh;
+}
+
+.send-btn {
+  background-color: #dbaa00;
+  border-radius: 100px;
+  letter-spacing: 10%;
+  color: black;
+  font-family: "Abel";
+  font-size: 14px;
+  padding: 14px 20px;
+  width: 200px;
+}
+
+.send-btn:hover {
+  background-color: transparent;
+  color: #dbaa00;
+  border: 1px #dbaa00 solid;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 867px) {
+  .send-btn {
+    width: 100%;
+  }
+}
+
 /* audio player  */
 
 *,

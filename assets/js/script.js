@@ -12,7 +12,48 @@ const hamburger = document.getElementById("hamburger");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
+  if (hamburger.classList.contains("active")) {
+    mainNav.style.backgroundColor = "black";
+  } else {
+    mainNav.style.backgroundColor = "";
+  }
 });
+
+const navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    mainNav.style.backgroundColor = "";
+    navbarNav.classList.remove("show");
+  });
+});
+
+let emailSuccess = document.getElementById("email-success");
+let emailFail = document.getElementById("email-fail");
+let contactForm = document.getElementById("contact-form");
+
+function sendMail(contactForm) {
+  emailjs
+    .send("", "", {
+      from_name: contactForm.name.value,
+      to_name: "",
+      user_email: contactForm.emailaddress.value,
+      message: contactForm.content.value,
+    })
+    .then(
+      function (response) {
+        console.log("SUCCESS", response);
+        emailSuccess.classList.remove("hide");
+        contactForm.classList.add("hide");
+      },
+      function (error) {
+        console.log("ERROR", error);
+        emailFail.classList.remove("hide");
+      },
+    );
+  return false;
+}
 
 // audio player
 
