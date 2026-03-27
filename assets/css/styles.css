@@ -67,12 +67,12 @@ a:hover {
 #about,
 #home {
   scroll-margin-top: 120px;
-  min-height: 100vh;
 }
 
 /* hero section  */
 
 #home {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -293,7 +293,8 @@ a:hover {
 
 /* contact  */
 
-#contact {
+#contact,
+#about {
   min-height: 84vh;
 }
 
@@ -329,7 +330,7 @@ a:hover {
 
 .social-media a {
   font-size: 200% !important;
-  margin: 1% 7% !important;
+  margin: 1% 5% !important;
   color: #dbaa00 !important;
   text-decoration: none !important;
   padding: 10px 15px !important;
