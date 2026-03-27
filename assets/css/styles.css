@@ -65,7 +65,8 @@ a:hover {
 }
 
 #about,
-#home {
+#home,
+#contact {
   scroll-margin-top: 120px;
 }
 
