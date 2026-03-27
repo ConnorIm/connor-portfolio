@@ -177,9 +177,23 @@ a:hover {
   font-size: 20px;
 }
 
-#about .about-text,
-#contact {
-  padding-inline: 20%;
+.about-container {
+  padding-inline: 16%;
+}
+
+.about-container {
+  padding-top: 80px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+.about-headshot img {
+  max-height: 500px;
+  width: auto;
+  border-radius: 50px;
 }
 
 .marquee {
@@ -261,7 +275,6 @@ a:hover {
 
 .resume-btn,
 .resume-download a {
-  text-align: center;
   font-family: "Outfit", sans-serif;
 }
 
@@ -278,9 +291,31 @@ a:hover {
   font-size: 14px;
 }
 
+.equipment {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 40px;
+}
+
 @media screen and (max-width: 991px) {
   .resume-download a {
     margin-top: 8px;
+  }
+
+  .resume-btn {
+    text-align: center;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 32px;
+    padding-inline: 10%;
+  }
+
+  .about-headshot img {
+    max-width: 400px;
   }
 }
 
@@ -289,6 +324,13 @@ a:hover {
   #contact {
     padding-inline: 10%;
   }
+
+  .equipment {
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 /* contact  */
@@ -296,6 +338,10 @@ a:hover {
 #contact,
 #about {
   min-height: 84vh;
+}
+
+#contact {
+  padding-inline: 20%;
 }
 
 .send-btn {
@@ -354,6 +400,10 @@ a:hover {
 @media screen and (max-width: 867px) {
   .send-btn {
     width: 100%;
+  }
+
+  #contact {
+    padding-inline: 10%;
   }
 }
 
